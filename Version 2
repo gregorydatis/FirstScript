@@ -48,6 +48,6 @@ then messageSucre="Avec sucre"
 elif [ "$sucre" = "Non" ]
 then messageSucre="Sans sucre"
 
-else echo "Réponse invalide veuillez choisir Oui ou Non"
+else echo "Réponse invalide, veuillez choisir Oui ou Non"
 fi
 

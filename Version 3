@@ -4,6 +4,18 @@ MachineAcafe
 #!/bin/bash
 
 
+# Fichiers stockage 
+
+stock_café=$(cat stock_café.txt)
+stock_thé=$(cat stock_thé.txt)
+stock_chocolat=$(cat stock_chocolat.txt)
+stock_gobelet=$(cat stock_gobelet.txt)
+stock_touillette=$(cat stock_touillette.txt)
+
+echo ""
+
+
+
 # Menu des boissons
 
 echo "Choisissez une boisson :"
@@ -49,5 +61,32 @@ elif [ "$sucre" = "Non" ]
 then messageSucre="Sans sucre"
 
 else echo "Réponse invalide, veuillez choisir Oui ou Non"
+exit 1
 fi
+
+# Fichier en fin de script 
+
+echo $stock_café > stock_café.txt
+echo $stock_the > stock_thé.txt
+echo $stock_chocolat > stock_chocolat.txt
+echo $stock_gobelet > stock_gobelet.txt
+echo $stock_sucre > stock_sucre.txt
+echo $stock_touillette > stock_touillette.txt
+
+# Résumé
+
+echo ""
+echo "=== Récapitulatif ==="
+echo "Boisson    : $boisson"
+echo "Gobelet    : $messageGobelet"
+echo "Sucre      : $messageSucre"
+echo "Touillette : $messageTouillette"
+echo ""
+echo "=== Stocks restants ==="
+echo "Café        : $stock_cafe"
+echo "Thé         : $stock_the"
+echo "Chocolat    : $stock_chocolat"
+echo "Gobelets    : $stock_gobelet"
+echo "Sucre       : $stock_sucre"
+echo "Touillettes : $stock_touillette"
 

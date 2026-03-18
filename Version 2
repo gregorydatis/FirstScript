@@ -1,0 +1,53 @@
+# FirstScript
+MachineAcafe
+
+#!/bin/bash
+
+
+# Menu des boissons
+
+echo "Choisissez une boisson :"
+echo "1) café"
+echo "2) thé"
+echo "3) chocolat"
+
+echo "Entrez votre choix 1,2 ou 3"
+read choix 
+
+if [ "$choix" = "1" ]
+then echo "Vous avez choisi café. Bonne dégustation !"
+boisson="café"
+
+elif ["$choix" = "2" ]
+then echo "Vous avez choisi thé. Bonne dégustation !"
+boisson="thé"
+
+elif ["$choix" = "3" ]
+then echo "Vous avez choisi chocolat. Bonne dégustation !"
+boisson="chocolat"
+else    echo "Réponse invalide"
+fi
+
+# Gestion des gobelets
+
+read -p "Avez vous un gobelet (Oui/Non) :" gobelet
+if [ "$gobelet" = "Oui" ]
+then messageGobelet="Vous avez un gobelet"
+elif [ "$gobelet" = "Non" ]
+then messageGobelet="Vous n'avez pas de gobelet"
+
+else echo "Réponse invalide, veuillez répondre Oui ou Non"
+fi
+
+# Gestion du sucre 
+
+read -p "Avez vous du sucre (Oui/Non) : " sucre
+if [ "$sucre" = "Oui" ]
+then messageSucre="Avec sucre"
+
+elif [ "$sucre" = "Non" ]
+then messageSucre="Sans sucre"
+
+else echo "Réponse invalide veuillez choisir Oui ou Non"
+fi
+

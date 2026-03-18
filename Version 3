@@ -76,17 +76,17 @@ echo $stock_touillette > stock_touillette.txt
 # Résumé
 
 echo ""
-echo "=== Récapitulatif ==="
+
+echo " Récapitulatif "
 echo "Boisson    : $boisson"
 echo "Gobelet    : $messageGobelet"
 echo "Sucre      : $messageSucre"
 echo "Touillette : $messageTouillette"
 echo ""
-echo "=== Stocks restants ==="
-echo "Café        : $stock_cafe"
-echo "Thé         : $stock_the"
+echo " Stocks restants "
+echo "Café        : $stock_café"
+echo "Thé         : $stock_thé"
 echo "Chocolat    : $stock_chocolat"
 echo "Gobelets    : $stock_gobelet"
 echo "Sucre       : $stock_sucre"
 echo "Touillettes : $stock_touillette"
-
